@@ -1,0 +1,28 @@
+[package]
+name = "seedgen"
+version = "0.1.0"
+edition = "2021"
+description = "Generates realistic fake data (CSV/JSON/SQL) from a small YAML/JSON schema — no faker CLI exists in Rust today, only library crates"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/seedgen"
+readme = "README.md"
+keywords = ["fake-data", "seed", "testing", "cli", "fixtures"]
+categories = ["command-line-utilities", "development-tools"]
+
+[lib]
+name = "seedgen"
+path = "src/lib.rs"
+
+[[bin]]
+name = "seedgen"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+serde_yaml = "0.9"
+fake = "3"
+rand = "0.8"
