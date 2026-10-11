@@ -7,6 +7,12 @@ of realistic seed rows means writing a throwaway Rust (or Python
 `faker`, or Node `@faker-js/faker`) script every time. This is that
 script, generalized into a schema file you write once and reuse.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
